@@ -1,5 +1,6 @@
 import React from 'react';
 import { Briefcase, ShieldCheck, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const ProductsSection: React.FC = () => {
   const products = [
@@ -33,20 +34,52 @@ const ProductsSection: React.FC = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
   return (
     <section id="products" className="py-24 bg-surface relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Our Products</h2>
           <p className="text-textMuted max-w-2xl mx-auto">
             Specialized solutions designed to fortify your digital perimeter and empower your strategic decision-making.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
           {products.map((product) => (
-            <div 
+            <motion.div 
               key={product.id}
+              variants={itemVariants}
               className="glass-panel p-8 rounded-2xl hover:border-white/20 transition-all group"
             >
               <div className={`w-14 h-14 ${product.bg} ${product.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -70,9 +103,9 @@ const ProductsSection: React.FC = () => {
               <button className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
                 Learn More <ArrowRight size={16} className={product.color} />
               </button>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Background Decoration */}
