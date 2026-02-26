@@ -25,9 +25,12 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <div className="flex items-center gap-2 cursor-pointer group" onClick={() => scrollToSection('hero')}>
-          <Logo className="text-white group-hover:text-primary transition-colors" size={32} />
-          <span className="text-xl font-bold tracking-tight font-sans text-white uppercase">VYKEN<span className="text-gray-500">SECURITY</span></span>
+        <div className="flex items-center gap-3 cursor-pointer group" onClick={() => scrollToSection('hero')}>
+          <Logo className="text-white" size={44} />
+          <div className="flex flex-col leading-none">
+            <span className="text-3xl font-bold tracking-tighter text-white lowercase">vyken</span>
+            <span className="text-[9px] font-bold tracking-[0.4em] text-white uppercase self-end -mt-0.5 pr-0.5">security</span>
+          </div>
         </div>
 
         {/* Desktop Nav */}
