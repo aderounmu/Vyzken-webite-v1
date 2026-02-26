@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Shield className="w-8 h-8 text-white" />
-              <span className="text-xl font-bold tracking-tight">SENTINEL<span className="text-gray-500">ADVISORY</span></span>
+              <span className="text-xl font-bold tracking-tight uppercase">VYKEN<span className="text-gray-500">SECURITY</span></span>
             </div>
             <p className="text-gray-400 max-w-md mb-8">
-              Transforming raw data into actionable intelligence. Secure your organization without the operational burden.
+              Transforming raw data into actionable intelligence. Secure your organization with Vykensecurity's elite advisory and protection services.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-primary transition-colors text-gray-400">
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>&copy; 2024 Sentinel Advisory. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Vykensecurity. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
