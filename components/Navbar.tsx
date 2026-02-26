@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,7 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-2 cursor-pointer group" onClick={() => scrollToSection('hero')}>
-          <Shield className="w-8 h-8 text-white group-hover:text-primary transition-colors" />
+          <Logo className="text-white group-hover:text-primary transition-colors" size={32} />
           <span className="text-xl font-bold tracking-tight font-sans text-white uppercase">VYKEN<span className="text-gray-500">SECURITY</span></span>
         </div>
 
