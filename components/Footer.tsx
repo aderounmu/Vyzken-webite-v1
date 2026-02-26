@@ -1,6 +1,5 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
-import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
@@ -8,12 +7,13 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <Logo className="text-white" size={44} />
-              <div className="flex flex-col leading-none">
-                <span className="text-3xl font-bold tracking-tighter text-white lowercase">vyken</span>
-                <span className="text-[9px] font-bold tracking-[0.4em] text-white uppercase self-end -mt-0.5 pr-0.5">security</span>
-              </div>
+            <div className="flex items-center mb-6">
+              <img 
+                src="/assets/vyken_security.png" 
+                alt="Vykensecurity Logo" 
+                className="h-12 w-auto"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <p className="text-gray-400 max-w-md mb-8">
               Transforming raw data into actionable intelligence. Secure your organization with Vykensecurity's elite advisory and protection services.
