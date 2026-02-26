@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
+import Logo from "../assets/vyken_security.png";
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +10,8 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-6">
               <img 
-                src="/assets/vyken_security.png" 
+                src={Logo}
+                // src="/assets/vyken_security.png" 
                 alt="Vykensecurity Logo" 
                 className="h-12 w-auto"
                 referrerPolicy="no-referrer"
