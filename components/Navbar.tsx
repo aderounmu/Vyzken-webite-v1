@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from "../assets/vyken_security.png";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,10 +27,9 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center cursor-pointer group" onClick={() => scrollToSection('hero')}>
           <img 
-            src="/vyken_security.png" 
+            src={Logo}
             alt="Vykensecurity Logo" 
             className="h-12 w-auto"
-            referrerPolicy="no-referrer"
           />
         </div>
 
