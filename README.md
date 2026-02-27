@@ -18,3 +18,6 @@ View your app in AI Studio: https://ai.studio/apps/225465b6-ac90-4242-b5b5-04ae3
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+Note: 
+Images Don't work properly when push from google ai studio so ensure you reupdate all images used
