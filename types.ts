@@ -7,7 +7,7 @@ export interface ServiceItem {
   deliverables: string[];
   benefits: string[];
   icon: LucideIcon;
-  visualType: 'list' | 'chart' | 'flow' | 'calendar';
+  visualType: 'list' | 'chart' | 'flow' | 'calendar' | 'siem-flow';
 }
 
 export interface NavLink {

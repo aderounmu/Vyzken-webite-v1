@@ -77,5 +77,24 @@ export const SERVICES: ServiceItem[] = [
     ],
     icon: MailWarning,
     visualType: 'flow'
+  },
+  {
+    id: "siem",
+    title: "SIEM Advisory & Detection Use-Case Design",
+    overview: "Transform raw log data into actionable security alerts without operating your SIEM. We design detection use cases, define correlation logic, and provide tuning guidance.",
+    deliverables: [
+      "Use-Case Catalog (customized for your environment)",
+      "Detection Logic Documentation",
+      "Implementation Guidance Notes",
+      "Tuning & Optimization Recommendations",
+      "Executive Summary"
+    ],
+    benefits: [
+      "Actionable, threat-aligned detections",
+      "Reduced false positives and alert fatigue",
+      "Compliance-aligned threat coverage"
+    ],
+    icon: ShieldAlert,
+    visualType: 'siem-flow'
   }
 ];

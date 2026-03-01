@@ -1,12 +1,13 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
-import Logo from "../assets/vyken_security.png";
+import { Link } from 'react-router-dom';
+const Logo = "/vyken_security.png";
 
 const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-black border-t border-white/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           <div>
             <div className="flex items-center mb-6">
               <img 
@@ -26,6 +27,18 @@ const Footer: React.FC = () => {
                 <Twitter size={20} />
               </a>
             </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Products</h3>
+            <ul className="space-y-4">
+              <li>
+                <Link to="/vyken-guard" className="text-gray-400 hover:text-primary transition-colors">Vyken Guard™</Link>
+              </li>
+              <li>
+                <span className="text-gray-600 cursor-not-allowed">Vyken Consults (Coming Soon)</span>
+              </li>
+            </ul>
           </div>
 
           <div className="bg-white/[0.03] p-8 rounded-xl border border-white/5">

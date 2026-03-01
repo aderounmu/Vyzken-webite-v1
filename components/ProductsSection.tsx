@@ -1,23 +1,10 @@
 import React from 'react';
-import { Briefcase, ShieldCheck, ArrowRight } from 'lucide-react';
+import { ShieldCheck, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ProductsSection: React.FC = () => {
   const products = [
-    {
-      id: 'consults',
-      name: 'Vyken Consults',
-      description: 'Strategic cybersecurity advisory tailored to your business objectives. We provide the roadmap for your security journey.',
-      features: [
-        'Risk Assessment & Gap Analysis',
-        'Compliance Readiness (ISO, SOC2, NIST)',
-        'Security Architecture Design',
-        'vCISO Advisory Services'
-      ],
-      icon: Briefcase,
-      color: 'text-primary',
-      bg: 'bg-primary/10'
-    },
     {
       id: 'guard',
       name: 'Vyken Guard',
@@ -74,7 +61,7 @@ const ProductsSection: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="max-w-2xl mx-auto"
         >
           {products.map((product) => (
             <motion.div 
@@ -100,9 +87,9 @@ const ProductsSection: React.FC = () => {
                 ))}
               </ul>
 
-              <button className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
+              <Link to="/vyken-guard" className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
                 Learn More <ArrowRight size={16} className={product.color} />
-              </button>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

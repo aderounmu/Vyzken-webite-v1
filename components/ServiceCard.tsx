@@ -1,7 +1,8 @@
 import React from 'react';
 import { ServiceItem } from '../types';
-import { Check, BarChart, FileCheck, Calendar, MailWarning } from 'lucide-react';
+import { Check, BarChart, FileCheck, Calendar, MailWarning, ShieldAlert } from 'lucide-react';
 import PhishingFlow from './PhishingFlow';
+import SIEMFlow from './SIEMFlow';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { motion } from 'framer-motion';
 
@@ -192,9 +193,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
                     </motion.div>
                  </div>
                )}
+
+               {service.visualType === 'siem-flow' && (
+                 <div className="w-full flex items-center justify-center">
+                    <motion.div 
+                      animate={{ opacity: [0.5, 1, 0.5] }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                      className="text-center"
+                    >
+                        <ShieldAlert className="w-12 h-12 text-blue-500 mx-auto mb-2 opacity-80" />
+                        <div className="text-xs text-gray-500 font-mono uppercase">Detection Engine</div>
+                    </motion.div>
+                 </div>
+               )}
             </motion.div>
-            {/* If it's the phishing flow, render the extra component below */}
+            {/* If it's the phishing flow or siem flow, render the extra component below */}
             {service.visualType === 'flow' && <PhishingFlow />}
+            {service.visualType === 'siem-flow' && <SIEMFlow />}
           </div>
         </div>
       </div>
