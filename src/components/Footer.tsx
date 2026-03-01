@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const Logo = "/vyken_security.png";
+import Logo from "@/assets/vyken_security.png"
 
 const Footer: React.FC = () => {
   return (
@@ -35,9 +35,9 @@ const Footer: React.FC = () => {
               <li>
                 <Link to="/vyken-guard" className="text-gray-400 hover:text-primary transition-colors">Vyken Guard™</Link>
               </li>
-              <li>
+              {/* <li>
                 <span className="text-gray-600 cursor-not-allowed">Vyken Consults (Coming Soon)</span>
-              </li>
+              </li> */}
             </ul>
           </div>
 
