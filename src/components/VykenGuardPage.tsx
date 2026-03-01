@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Eye, Search, Lock, CheckCircle, ArrowRight, Activity, BarChart3, Zap } from 'lucide-react';
-
+import AbImage1 from "@/assets/ab-image-1.png"
+import AbImage2 from "@/assets/ab-image-2.png"
+import AbImage3 from "@/assets/ab-image-3.png"
+import AbImage4 from "@/assets/ab-image-4.png"
 const VykenGuardPage: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -80,8 +83,8 @@ const VykenGuardPage: React.FC = () => {
       </section>
 
       {/* 2. Solution Overview Section */}
-      <section className="py-32 px-6 bg-surface/20 border-y border-white/5">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-32 md:pb-0 md:pt-32 px-6 md:pr-0 md:pl-6  bg-surface/20 border-y border-white/5">
+        <div className="max-w-7xl mx-auto md:mr-0 md:ml-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <motion.div 
               initial="hidden"
@@ -91,12 +94,12 @@ const VykenGuardPage: React.FC = () => {
               className="lg:col-span-5"
             >
               <motion.h2 variants={itemVariants} className="text-sm uppercase tracking-[0.2em] text-blue-500 font-bold mb-6">The Solution</motion.h2>
-              <motion.h3 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-8 leading-tight">The Vyken Guard Solution</motion.h3>
+              <motion.h3 variants={itemVariants} className="text-2xl md:text-5xl font-bold mb-8 leading-tight">The Vyken Guard Solution</motion.h3>
               <motion.p variants={itemVariants} className="text-base text-textMuted leading-relaxed mb-8">
                 Vyken Guard™ is a developed Artificial Intelligence Governance and Real-time Data Loss Prevention (DLP) platform designed to help organizations securely adopt artificial intelligence technologies without exposing proprietary, regulated, or mission-critical information.
               </motion.p>
               <motion.div variants={itemVariants} className="p-8 bg-white/[0.03] border border-white/10 rounded-2xl mb-8">
-                <p className="text-lg font-mono text-blue-400 text-center flex items-center justify-center gap-4">
+                <p className="text-md font-mono text-blue-400 text-center flex items-center justify-center gap-4">
                   Employees <ArrowRight size={16} /> AI Tools <ArrowRight size={16} /> External Systems
                 </p>
               </motion.div>
@@ -109,13 +112,13 @@ const VykenGuardPage: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={imageVariants}
-              className="lg:col-span-7"
+              className="lg:col-span-7 md:overflow-clip md:h-150"
             >
-              <div className="rounded-3xl overflow-hidden border border-white/10 shadow-3xl bg-black/40 group">
+              <div className="rounded-3xl md:w-255 md:h-255 overflow-hidden border border-white/10 shadow-3xl bg-black/40 group">
                 <img 
-                  src="https://picsum.photos/seed/vyken-solution/1600/1000" 
+                  src={AbImage1} 
                   alt="Vyken Guard Solution Overview" 
-                  className="w-full h-auto object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000 ease-out"
+                  className=" md:h-150 object-top-left object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000 ease-out"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -135,7 +138,7 @@ const VykenGuardPage: React.FC = () => {
             className="max-w-3xl mb-32"
           >
             <h2 className="text-sm uppercase tracking-[0.2em] text-blue-500 font-bold mb-6">Process</h2>
-            <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">How Vyken Guard Protects Your Organization</h3>
+            <h3 className="text-2xl md:text-6xl font-bold mb-8 leading-tight">How Vyken Guard Protects Your Organization</h3>
           </motion.div>
           
           <div className="space-y-64">
@@ -165,7 +168,7 @@ const VykenGuardPage: React.FC = () => {
               >
                 <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/20 group">
                   <img 
-                    src="https://picsum.photos/seed/monitoring/1600/900" 
+                    src={AbImage2} 
                     alt="Monitoring Dashboard" 
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                     referrerPolicy="no-referrer"
@@ -185,7 +188,7 @@ const VykenGuardPage: React.FC = () => {
               >
                 <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/20 group">
                   <img 
-                    src="https://picsum.photos/seed/analyzing/1600/900" 
+                    src={AbImage3}  
                     alt="Analyzing Visual" 
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                     referrerPolicy="no-referrer"
@@ -235,7 +238,7 @@ const VykenGuardPage: React.FC = () => {
               >
                 <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/20 group">
                   <img 
-                    src="https://picsum.photos/seed/enforcing/1600/900" 
+                    src={AbImage4} 
                     alt="Enforcing Visual" 
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                     referrerPolicy="no-referrer"
@@ -259,7 +262,7 @@ const VykenGuardPage: React.FC = () => {
           >
             <div className="lg:col-span-6">
               <h2 className="text-sm uppercase tracking-[0.2em] text-blue-500 font-bold mb-6">Features</h2>
-              <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">Core Capabilities</h3>
+              <h3 className="text-2xl md:text-6xl font-bold mb-8 leading-tight">Core Capabilities</h3>
               <p className="text-xl text-white font-medium mb-4">AI Usage Visibility</p>
               <p className="text-base text-textMuted leading-relaxed max-w-lg">
                 Gain complete insight into how AI tools are being used across your organization.
@@ -306,7 +309,7 @@ const VykenGuardPage: React.FC = () => {
             className="text-center mb-32"
           >
             <h2 className="text-sm uppercase tracking-[0.2em] text-blue-500 font-bold mb-6">Value</h2>
-            <h3 className="text-4xl md:text-6xl font-bold leading-tight">Key Benefits</h3>
+            <h3 className="text-2xl md:text-6xl font-bold leading-tight">Key Benefits</h3>
           </motion.div>
           
           <motion.div 
@@ -367,7 +370,7 @@ const VykenGuardPage: React.FC = () => {
               variants={containerVariants}
               className="lg:col-span-6"
             >
-              <motion.h2 variants={itemVariants} className="text-4xl md:text-7xl font-bold mb-12 text-white leading-[0.9]">See Vyken Guard <br /> in action</motion.h2>
+              <motion.h2 variants={itemVariants} className="text-2xl md:text-5xl font-bold mb-12 text-white leading-[1.2]">See Vyken Guard <br /> in action</motion.h2>
               <motion.ul variants={containerVariants} className="space-y-8 mb-16">
                 {[
                   "Live AI Risk Walkthrough",
@@ -384,7 +387,7 @@ const VykenGuardPage: React.FC = () => {
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-12 py-6 bg-white text-blue-600 rounded-full text-xl font-bold shadow-2xl flex items-center gap-4 transition-all hover:shadow-white/20"
+                className="px-12 py-6 bg-white text-blue-600 rounded-full text-md font-bold shadow-2xl flex items-center gap-4 transition-all hover:shadow-white/20"
               >
                 Book Your Demo Today <ArrowRight size={24} />
               </motion.button>
@@ -399,7 +402,7 @@ const VykenGuardPage: React.FC = () => {
             >
               <div className="rounded-3xl overflow-hidden shadow-4xl bg-black/20 backdrop-blur-sm border border-white/10 group">
                 <img 
-                  src="https://picsum.photos/seed/demo/1200/1200" 
+                  src={AbImage1}  
                   alt="Vyken Guard Demo" 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                   referrerPolicy="no-referrer"
