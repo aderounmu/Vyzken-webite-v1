@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-const Logo = "https://picsum.photos/seed/vyken/200/80"; // Placeholder until /vyken_security.png is uploaded
+const Logo = "/vyken_security.png";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const Logo = "https://picsum.photos/seed/vyken/200/80"; // Placeholder until /vyken_security.png is uploaded
+const Logo = "/vyken_security.png";
 
 const Footer: React.FC = () => {
   return (
