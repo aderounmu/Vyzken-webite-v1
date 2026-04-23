@@ -5,6 +5,30 @@ import Logo from "@/assets/vyken_security.png"
 import GuardLogo from "@/assets/vyken_guard.png"
 
 const Footer: React.FC = () => {
+  const [formState , setFormState] = React.useState<{
+    name: string;
+    email: string;
+    message: string;
+  }>({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormState(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const subject = `Inquiry request from ${formState.name} ${formState.email}`;
+    const body = formState.message;
+    const mailtoLink = `mailto:info@vykenconsulting.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(mailtoLink, '_blank', 'noopener,noreferrer');
+  };
   return (
     <footer id="contact" className="bg-black border-t border-white/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
@@ -65,13 +89,34 @@ const Footer: React.FC = () => {
 
           <div className="bg-white/[0.03] p-8 rounded-xl border border-white/5">
             <h3 className="text-xl font-semibold mb-6">Start a Conversation</h3>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={submitForm}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="Name" className="bg-black/50 border border-white/10 rounded p-3 text-sm focus:outline-none focus:border-primary/50 text-white" />
-                <input type="email" placeholder="Work Email" className="bg-black/50 border border-white/10 rounded p-3 text-sm focus:outline-none focus:border-primary/50 text-white" />
+                <input 
+                  type="text" 
+                  placeholder="Name" 
+                  className="bg-black/50 border border-white/10 rounded p-3 text-sm focus:outline-none focus:border-primary/50 text-white" 
+                  name="name"
+                  value={formState.name}
+                  onChange={handleInputChange}
+                />
+                <input 
+                  type="email" 
+                  placeholder="Work Email" 
+                  className="bg-black/50 border border-white/10 rounded p-3 text-sm focus:outline-none focus:border-primary/50 text-white" 
+                  name="email"
+                  value={formState.email}
+                  onChange={handleInputChange}
+                />
               </div>
-              <textarea placeholder="How can we help?" rows={4} className="w-full bg-black/50 border border-white/10 rounded p-3 text-sm focus:outline-none focus:border-primary/50 text-white"></textarea>
-              <button className="w-full bg-white text-black font-semibold py-3 rounded hover:bg-gray-200 transition-colors">
+              <textarea 
+                placeholder="How can we help?" 
+                rows={4} 
+                className="w-full bg-black/50 border border-white/10 rounded p-3 text-sm focus:outline-none focus:border-primary/50 text-white" 
+                name="message"
+                value={formState.message}
+                onChange={handleInputChange}
+              ></textarea>
+              <button type="submit" className="w-full bg-white text-black font-semibold py-3 rounded hover:bg-gray-200 transition-colors">
                 Request Consultation
               </button>
             </form>
