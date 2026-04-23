@@ -6,6 +6,8 @@ import ProductsSection from './components/ProductsSection';
 import ServicesSection from './components/ServicesSection';
 import Footer from './components/Footer';
 import VykenGuardPage from './components/VykenGuardPage';
+import TermsAndConditions from './components/TermsAndConditions';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
               </>
             } />
             <Route path="/vyken-guard" element={<VykenGuardPage />} />
+            <Route path="/terms-condition" element={<TermsAndConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <Footer />

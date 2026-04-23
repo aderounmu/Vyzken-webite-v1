@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variant, Variants } from 'framer-motion';
 import { Shield, Eye, Search, Lock, CheckCircle, ArrowRight, Activity, BarChart3, Zap } from 'lucide-react';
 import AbImage1 from "@/assets/ab-image-1.png"
 import AbImage2 from "@/assets/ab-image-2.png"
@@ -15,7 +15,7 @@ const VykenGuardPage: React.FC = () => {
         delayChildren: 0.2
       }
     }
-  };
+  } as Variants;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -24,7 +24,7 @@ const VykenGuardPage: React.FC = () => {
       y: 0,
       transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
     }
-  };
+  } as Variants;
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.95 },
@@ -33,7 +33,7 @@ const VykenGuardPage: React.FC = () => {
       scale: 1,
       transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
     }
-  };
+  } as Variants;
 
   return (
     <motion.div 
