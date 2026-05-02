@@ -9,7 +9,7 @@ import { useScrollToSection } from '@/utils';
 const VykenGuardPage: React.FC = () => {
 
   const {
-      navigation , 
+      navigate , 
       location,
       scrollToSection, 
       isScrolled, 

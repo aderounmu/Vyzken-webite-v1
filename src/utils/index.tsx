@@ -48,7 +48,7 @@ export const useScrollToSection = ({
   }, [location]);
 
   return {
-    navigation , 
+    navigate , 
     location,
     scrollToSection, 
     isScrolled, 
