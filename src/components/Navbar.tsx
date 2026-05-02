@@ -2,46 +2,57 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Logo from '@/assets/vyken_security.png';
+import { useScrollToSection } from '@/utils';
 
 const Navbar: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 20);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
-  const scrollToSection = (id: string) => {
-    setMobileMenuOpen(false);
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTo: id } });
-      return;
-    }
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const scrollToSection = (id: string) => {
+  //   setMobileMenuOpen(false);
+  //   if (location.pathname !== '/') {
+  //     navigate('/', { state: { scrollTo: id } });
+  //     return;
+  //   }
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
-  useEffect(() => {
-    if (location.pathname === '/' && location.state && (location.state as any).scrollTo) {
-      const id = (location.state as any).scrollTo;
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-      // Clear state
-      window.history.replaceState({}, document.title);
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (location.pathname === '/' && location.state && (location.state as any).scrollTo) {
+  //     const id = (location.state as any).scrollTo;
+  //     setTimeout(() => {
+  //       const element = document.getElementById(id);
+  //       if (element) {
+  //         element.scrollIntoView({ behavior: 'smooth' });
+  //       }
+  //     }, 100);
+  //     // Clear state
+  //     window.history.replaceState({}, document.title);
+  //   }
+  // }, [location]);
+
+  const {
+    navigation , 
+    location,
+    scrollToSection, 
+    isScrolled, 
+    setIsScrolled
+  } = useScrollToSection({
+    setMobileMenuOpen
+  })
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>

@@ -1,11 +1,21 @@
 import React from 'react';
-import { motion, Variant, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Shield, Eye, Search, Lock, CheckCircle, ArrowRight, Activity, BarChart3, Zap } from 'lucide-react';
 import AbImage1 from "@/assets/ab-image-1.png"
 import AbImage2 from "@/assets/ab-image-2.png"
 import AbImage3 from "@/assets/ab-image-3.png"
 import AbImage4 from "@/assets/ab-image-4.png"
+import { useScrollToSection } from '@/utils';
 const VykenGuardPage: React.FC = () => {
+
+  const {
+      navigation , 
+      location,
+      scrollToSection, 
+      isScrolled, 
+      setIsScrolled
+    } = useScrollToSection({
+    })
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -67,7 +77,7 @@ const VykenGuardPage: React.FC = () => {
               variants={itemVariants}
               className="mt-12"
             >
-              <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all shadow-lg shadow-blue-600/20 hover:scale-105 active:scale-95">
+              <button onClick={() => scrollToSection('contact')} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all shadow-lg shadow-blue-600/20 hover:scale-105 active:scale-95">
                 Schedule a demo
               </button>
             </motion.div>
