@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
 
     const subject = `Inquiry request from ${formState.name} ${formState.email}`;
     const body = formState.message;
-    const mailtoLink = `mailto:info@vykenconsulting.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:info@vykensecurity.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.open(mailtoLink, '_blank', 'noopener,noreferrer');
   };
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-primary" />
-                <a href="mailto:info@vykenconsulting.com" className="hover:text-white transition-colors">info@vykenconsulting.com</a>
+                <a href="mailto:info@vykensecurity.com" className="hover:text-white transition-colors">info@vykensecurity.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
