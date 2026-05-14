@@ -175,8 +175,8 @@ const sections: Section[] = [
         <p className="text-white font-medium">Vyken Security</p>
         <p>
           Email:{' '}
-          <a href="mailto:contact@vyken.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-            contact@vyken.com
+          <a href="mailto:info@vykensecurity.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+            info@vykensecurity.com
           </a>
         </p>
         <p>Website: vykensecurity.com</p>
@@ -279,7 +279,7 @@ const TermsAndConditions: React.FC = () => (
             <h3 className="text-2xl md:text-4xl font-bold leading-tight">Get in touch with our team</h3>
           </div>
           <a
-            href="mailto:contact@vyken.com"
+            href="mailto:info@vykensecurity.com"
             className="shrink-0 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all shadow-lg shadow-blue-600/20 hover:scale-105 active:scale-95"
           >
             Contact Vyken Security
