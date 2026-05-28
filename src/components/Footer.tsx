@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                     alt="Vyken Security" 
                     className="h-6 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
                   />
-                  <span>Vyken API</span>
+                  <span>Vyken Security</span>
                 </a>
               </li>
               
