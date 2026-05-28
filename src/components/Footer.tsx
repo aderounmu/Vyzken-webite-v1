@@ -81,6 +81,17 @@ const Footer: React.FC = () => {
                   <span>Vyken Guard™</span>
                 </Link>
               </li>
+               <li>
+                <a href="https://api.vykensecurity.com/ai-gap-checker/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group">
+                  <img 
+                    src={Logo} 
+                    alt="Vyken Security" 
+                    className="h-6 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
+                  />
+                  <span>Vyken API</span>
+                </a>
+              </li>
+              
               {/* <li>
                 <span className="text-gray-600 cursor-not-allowed">Vyken Consults (Coming Soon)</span>
               </li> */}

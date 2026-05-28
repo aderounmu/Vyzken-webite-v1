@@ -45,7 +45,6 @@ const Navbar: React.FC = () => {
   // }, [location]);
 
   const {
-    navigation , 
     location,
     scrollToSection, 
     isScrolled, 
@@ -69,6 +68,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollToSection('products')} className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Products</button>
           <Link to="/vyken-guard" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Vyken Guard™</Link>
+          <a href="https://api.vykensecurity.com/ai-gap-checker/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Vyken API</a>
           <button onClick={() => scrollToSection('services')} className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Services</button>
           <button onClick={() => scrollToSection('contact')} className="px-5 py-2 text-sm font-medium bg-white text-black hover:bg-gray-200 transition-colors rounded-sm">
             Contact Us
@@ -86,6 +86,7 @@ const Navbar: React.FC = () => {
         <div className="absolute top-full left-0 w-full bg-background border-b border-white/10 p-6 flex flex-col gap-4 md:hidden">
           <button onClick={() => scrollToSection('products')} className="text-left text-gray-300 py-2">Products</button>
           <Link to="/vyken-guard" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-300 py-2">Vyken Guard™</Link>
+          <a href="https://api.vykensecurity.com/ai-gap-checker/" target="_blank" rel="noopener noreferrer" className="text-left text-gray-300 py-2">Vyken API</a>
           <button onClick={() => scrollToSection('services')} className="text-left text-gray-300 py-2">Services</button>
           <button onClick={() => scrollToSection('contact')} className="text-left text-primary font-bold py-2">Contact Us</button>
         </div>
